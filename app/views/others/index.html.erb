@@ -1,0 +1,31 @@
+<h1>Listing others</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Answer</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Profession</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @others.each do |other| %>
+      <tr>
+        <td><%= other.answer %></td>
+        <td><%= other.age %></td>
+        <td><%= other.gender %></td>
+        <td><%= other.profession %></td>
+        <td><%= link_to 'Show', other %></td>
+        <td><%= link_to 'Edit', edit_other_path(other) %></td>
+        <td><%= link_to 'Destroy', other, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Other', new_other_path %>

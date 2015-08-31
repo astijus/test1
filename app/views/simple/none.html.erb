@@ -1,0 +1,37 @@
+<div class="container">
+
+<h1 align=center>THANK YOU FOR YOUR ANSWER<h1>
+	<br><br>
+	<h1 align=center>PLEASE LET US KNOW WHAT IS STOPPING YOU AS A BUSINESS PERSON<h1>
+
+
+		<%= form_for(Other.create, url: none_path, :method=> :POST )  do |f| %>
+ 
+
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :profession %><br>
+    <%= f.text_field :profession %>
+  </div> 
+   <div class="field">
+    <%= f.label :Issue %><br>
+    <%= f.text_area :answer %>
+  </div><br>
+  <div class="actions">
+    <%= f.submit "Submit", :class=>"btn" %>
+  </div>
+<% end %>
+
+<%= link_to "Home", root_path, :class=>"btn btn-success" %>
+
+
+</div>
+
+

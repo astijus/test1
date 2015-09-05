@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'development/cms'
+
+  get 'development/language'
+
+  get 'development/lost'
+
+  get 'development/first_app'
+
+  get 'development/add_theme'
+
   resources :others
 
   root 'simple#home', as: :root
